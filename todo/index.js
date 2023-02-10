@@ -1,16 +1,49 @@
 // . Crea una función que se llame getUniqueId y devuelva el número de milisegundos que hay desde 1970 utilizando la función getTime de Date
 // Esta función NO debe ser un Arrow function
 
+const getUniqueId =()=>{
+  return new Date().getTime()
+}
+
 // . Crea una función que se llame isString con un parámetro y devuelva si dicho parámetro es una cadena de texto
 // Esta función NO debe ser un Arrow function
+
+function isString (text) {
+  return typeof text === 'string';   
+}
+isString(5)
+
+const isString=(text)=>{
+  return typeof Text === 'string';
+ 
+  
+
+}
 
 // . Crea una función que se llame isEmpty con un parámetro y devuelva true si es una cadena de texto vacía.
 // Esta función NO debe ser un Arrow function
 
+const isEmpty = (text)=>{
+  return  text === ""
+}
+isEmpty('uu')
+
 // . Crea una función que se llame isValidText con un parámetro que te devuelva true si dicho parámetro es un texto Y no está vacío llamando a las dos funciones anteriores
+const isValidText = (text)=>{
+  return isString(text) && !isEmpty('text')
+}
+isValidText(1234)
+
+
 
 // . Crea una función que se llame isNumber con un parámetro y devuelva si dicho parámetro es un número
 // Esta función NO debe ser un Arrow function
+function isNumber (text){
+return  text === 
+}
+
+
+
 
 // . Crea una función que se llame isGreatherThan10 con un parámetro y devuelva true si es mayor que 10
 // Esta función NO debe ser un Arrow function
@@ -23,6 +56,13 @@
 
 // . Cambia la función anterior creando una nueva llamada createTaskWithTextValidation, que devuelva un string diciendo "Argumentos incorrectos" si el parámetro que guarda el texto no es una cadena de texto o está vacío
 // Esta función NO debe ser un Arrow function
+function createTaskWithTextValidation (text,id) {
+if(!isValidText(text)) {
+  return'Argumentos incorrectos';
+}
+return createTask(text, id)
+}
+
 
 // . Cambia la función anterior creando una nueva llamada createTaskWithValidation, para que además devuelva el string "Argumentos incorrectos" si el parámetro que guarda el ID no es un número y es menor o igual a 11
 // Esta función NO debe ser un Arrow function
@@ -38,3 +78,5 @@
 
 
 // Crea una función que se llame generateRandomTasks con un parámetro, que te cree un array con el número de tasks. 
+
+
