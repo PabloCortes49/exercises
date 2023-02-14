@@ -39,17 +39,29 @@ isValidText(1234)
 // . Crea una función que se llame isNumber con un parámetro y devuelva si dicho parámetro es un número
 // Esta función NO debe ser un Arrow function
 function isNumber (text){
-return  text === 
+return typeof text === 'number';
 }
-
+isNumber(4)
 
 
 
 // . Crea una función que se llame isGreatherThan10 con un parámetro y devuelva true si es mayor que 10
 // Esta función NO debe ser un Arrow function
 
+function isGreatherThan10 (text){
+  return text > '10'
+}
+
+isGreatherThan10(11)
+
 // . Crea una función que se llame isValidId con un parámetro que te devuelva true si dicho parámetro es un Número Y es mayor de 10 llamando a las dos funciones anteriores
 // Esta función NO debe ser un Arrow function
+
+function isValidId (text){
+  return isNumber (text) && isGreatherThan10 (text);
+}
+
+isValidId(20) //true
 
 // . Crea una función createTask con dós parámetros, un texto y un id único, y te devuelva un objeto con ambos parámetros.
 // Esta función NO debe ser un Arrow function
