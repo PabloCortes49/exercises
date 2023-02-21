@@ -13,12 +13,7 @@ function isString (text) {
 }
 isString(5)
 
-const isString=(text)=>{
-  return typeof Text === 'string';
- 
-  
 
-}
 
 // . Crea una función que se llame isEmpty con un parámetro y devuelva true si es una cadena de texto vacía.
 // Esta función NO debe ser un Arrow function
@@ -65,19 +60,49 @@ isValidId(20) //true
 
 // . Crea una función createTask con dós parámetros, un texto y un id único, y te devuelva un objeto con ambos parámetros.
 // Esta función NO debe ser un Arrow function
+function createTask (text,id) {
+return {
+  description: text,
+  id: id,
+}
+}
+createTask(7,12)
 
-// . Cambia la función anterior creando una nueva llamada createTaskWithTextValidation, que devuelva un string diciendo "Argumentos incorrectos" si el parámetro que guarda el texto no es una cadena de texto o está vacío
+
+
+
+// . Cambia la función anterior creando una nueva llamada createTaskWithTextValidation, 
+//que devuelva un string diciendo "Argumentos incorrectos" si el parámetro que guarda el 
+//texto no es una cadena de texto o está vacío
 // Esta función NO debe ser un Arrow function
+
 function createTaskWithTextValidation (text,id) {
-if(!isValidText(text)) {
-  return'Argumentos incorrectos';
+if(!isString() ||isEmpty ()
+) {
+  return "Argumentos incorrectos";
 }
-return createTask(text, id)
+return{
+  text:text, id:id,
 }
+}
+console.log(createTaskWithTextValidation(1,3))
 
 
 // . Cambia la función anterior creando una nueva llamada createTaskWithValidation, para que además devuelva el string "Argumentos incorrectos" si el parámetro que guarda el ID no es un número y es menor o igual a 11
 // Esta función NO debe ser un Arrow function
+
+function createTaskWithValidation (text,id) {
+  if (!isNumber(text) && isSmallerThan12(id)
+)
+{
+return "Argumentos incorrectos";
+}
+return{
+  text:text, id:id,
+}
+}
+console.log (createTaskWithValidation (a,2))
+
 
 // Crea todas las funciones anteriores como ARROW functions, y llámalas exactamente igual que las originales pero con el sufijo Arrow, por ejemplo getUniqueId sería getUniqueIdArrow
 
